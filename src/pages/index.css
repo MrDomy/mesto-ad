@@ -1,0 +1,139 @@
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+@import url('../blocks/page/page.css');
+@import url('../blocks/header/header.css');
+@import url('../blocks/content/content.css');
+@import url('../blocks/footer/footer.css');
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/places/places.css');
+@import url('../blocks/card/card.css');
+@import url('../blocks/popup/popup.css');
+@import url('../blocks/popup/_is-animated/popup_is-animated.css');
+@import url('../blocks/popup/_is-opened/popup_is-opened.css');
+/*Импортируем на уровень выше*/
+
+/* Custom unique styles for card controls and info metrics */
+.card-action-bar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  position: absolute;
+  top: 18px;
+  inset-inline: 15px;
+  width: calc(100% - 30px);
+}
+
+.card-action-icon {
+  width: 18px;
+  height: 18px;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-action-icon:hover {
+  opacity: 0.6;
+}
+
+.card-action-icon-remove {
+  background-image: url('../images/delete-icon.svg');
+  margin-left: auto;
+}
+
+.card-action-icon-metrics {
+  background-image: url('../images/information-icon.svg');
+}
+
+.metrics-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0 0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.metrics-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.metrics-label {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  padding: 1px 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.metrics-value {
+  margin-left: 0;
+  max-width: 320px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.metrics-subheader {
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.metrics-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  list-style: none;
+  gap: 12px;
+  margin: 20px 0 0;
+  font-size: 14px;
+  line-height: 17px;
+  padding-left: 0;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.metrics-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.metrics-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.metrics-list::-webkit-scrollbar-thumb {
+  background-color: #545454;
+}
+
+.metrics-badge {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  padding: 2px 6px;
+  max-width: 105px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 568px) {
+  .metrics-panel {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .metrics-list {
+    font-size: 10px;
+    line-height: 12px;
+    max-height: 180px;
+  }
+  .metrics-subheader {
+    font-size: 12px;
+  }
+}
